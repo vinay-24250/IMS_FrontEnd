@@ -8,6 +8,8 @@ import NewProduct from "./components/NewProduct";
 import Remove from "./components/Remove";
 import Products from "./components/Products";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
+import About from "./Pages/About";
 const App = () => {
   
   return (
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/Remove/:" element={<Remove />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Search" element={<Search />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </>
   );

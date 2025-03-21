@@ -84,9 +84,9 @@ const NewProduct = () => {
   };
 
   return (
-    <div className="bg-emerald-100 min-h-screen w-full flex-cols justify-items-center border-l-8 border-cyan-900">
+    <div className="bg-emerald-100 h-[580px] w-full flex-cols justify-items-center border-l-8 border-cyan-900">
       <div className="h-16 w-auto flex justify-center items-center py-10">
-        <h2 className="text-black font-serif font-bold text-xl md:text-2xl lg:2xl">
+        <h2 className="text-black font-serif font-bold text-xl md:text-2xl lg:2xl mt-10">
           ADD NEW PRODUCT
         </h2>
       </div>
@@ -95,7 +95,7 @@ const NewProduct = () => {
         onSubmit={() => {
           e.preventDefault();
         }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-20 px-5 m-20"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-5 mt-14 mb-10"
       >
         <input
           className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"

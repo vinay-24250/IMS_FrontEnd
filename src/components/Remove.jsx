@@ -67,7 +67,7 @@ const Remove = () => {
 
   return (
     <>
-    <div className="flex flex-col items-center pt-20 h-[650px] w-screen bg-emerald-100">
+    <div className="flex flex-col items-center pt-20 h-[580px] w-screen bg-emerald-100">
       <div className="mt-10 text-center">
         <h2 className="text-2xl font-bold mb-4 font-serif">REMOVE PRODUCT</h2>
 

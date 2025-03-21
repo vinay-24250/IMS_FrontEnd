@@ -47,8 +47,8 @@ const Navbar = () => {
             Search{" "}
             <FontAwesomeIcon className="text-xl" icon={faMagnifyingGlass} />{" "}
           </Link>
-          <button onClick={refreshPage} className="bg-transparent text-md font-serif fixed right-2">
-            <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon>
+          <button onClick={refreshPage} className="font-serif fixed right-2 mt-36 bg-yellow-300 rounded-full h-8 text-black text-sm">
+            Refresh
           </button>
         </div>
       </div>
