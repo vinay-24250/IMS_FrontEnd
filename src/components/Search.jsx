@@ -38,7 +38,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pt-20 h-[580px] w-screen bg-emerald-100">
+    <div className="flex flex-col place-items-center pt-20 h-[580px] w-screen bg-emerald-100">
       <div className="mt-10 text-center">
         <h2 className="text-2xl font-bold mb-4 font-serif">SEARCH PRODUCT</h2>
 
@@ -53,7 +53,7 @@ const Search = () => {
         <div>
           <button
             onClick={fetchProduct}
-            className="bg-blue-500 mt-4 text-white font-[Roboto] h-10 w-40 text-xl rounded-3xl transition delay-150 duration-300 ease-in-out my-11 hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
+            className="bg-blue-500 font-[Roboto] h-12 w-40 text-xl text-center mt-8 transition delay-150 duration-300 ease-in-out my-11 rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
           >
             Search
           </button>

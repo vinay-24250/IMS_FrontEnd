@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import UpdateProduct from "./updateProduct";
+import { useNavigate, useNavigationType } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/products/all")
@@ -113,10 +115,14 @@ const Products = () => {
                   {product.category}
                 </td>
                 <td className="p-2 border border-gray-800">
-                  <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 transition">
-                    Update
-                  </button>
-                </td>
+                <button
+  onClick={() => navigate(`/update/${product.productId}`)}
+  className="bg-stone-400 font-[Roboto] text-sm h-7 transition delay-150 duration-300 ease-in-out rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
+>
+  Update
+</button>
+</td>
+
               </tr>
             ))
           ) : (
@@ -131,7 +137,7 @@ const Products = () => {
 
       <button
         onClick={generateReport}
-        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition mt-10"
+        className="bg-stone-400  font-[Roboto] h-10 flex justify-center place-items-center transition delay-150 duration-300 ease-in-out my-11 rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
       >
         📄 Download Stock Report
       </button>

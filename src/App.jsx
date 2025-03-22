@@ -13,6 +13,7 @@ import About from "./Pages/About";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsOfService from "./Pages/TermsofService";
 import ContactUs from "./Pages/ContactUs";
+import UpdateProduct from "./components/updateProduct";
 const App = () => {
   
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/Remove/:" element={<Remove />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Search" element={<Search />} />
+        <Route path="/update/:productId" element={<UpdateProduct />} />
         <Route path="/About" element={<About />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />}></Route>
         <Route path="/TermsOfService" element={<TermsOfService />}></Route>

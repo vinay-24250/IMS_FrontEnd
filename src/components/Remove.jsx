@@ -21,7 +21,8 @@ const Remove = () => {
         `http://localhost:8080/api/products/fetchById/${productId}`
       );
       if (!response.data) {
-        setMessage("Product does not exist.");
+        setMessage("This Product ID does not exist. Please check and try again!");
+        setProduct(null)
         setTimeout(() => {
           setMessage("");
         }, 2000);
@@ -30,7 +31,7 @@ const Remove = () => {
       setProduct(response.data);
     } catch (error) {
       setProduct(null);
-      setMessage("Product not found. Please check the ID.");
+      setMessage("Error Finding the product.");
       console.log(error);
     } finally {
       setLoading(false);
@@ -79,21 +80,21 @@ const Remove = () => {
           onChange={(e) => setProductId(e.target.value)}
         />
 
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-3 mt-2">
           <button
             onClick={fetchProduct}
-            className="bg-blue-500 text-white font-[Roboto] h-10 w-40 text-xl rounded-3xl hover:bg-blue-600 transition"
+            className="bg-blue-500 font-[Roboto] h-12 w-40 text-xl flex justify-center place-items-center transition delay-150 duration-300 ease-in-out mt-8 rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
           >
             Fetch Product
           </button>
           <button
             onClick={handleDelete}
-            disabled={!product || loading}
+            disabled={!product || loading ||product.productId!=productId}
             className={`${
               product
-                ? "bg-red-500 hover:bg-red-600"
-                : "bg-gray-400 cursor-not-allowed"
-            } text-white font-[Roboto] h-10 w-40 text-xl rounded-3xl transition`}
+                ? "bg-blue-500 font-[Roboto] h-12 w-40 text-xl flex justify-center place-items-center text-black mt-8 transition delay-150 duration-300 ease-in-out rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
+                : "bg-gray-300 cursor-not-allowed font-[Roboto] h-12 w-40 text-xl flex justify-center place-items-center"
+            } text-black font-[Roboto] h-10 w-40 text-xl rounded-3xl transition mt-8`}
           >
             {loading ? "Deleting..." : "Remove Product"}
           </button>
@@ -135,8 +136,9 @@ const Remove = () => {
           </tr>
         </table>
       )}
+  
       {message && (
-        <p className="text-red-700 text-xl font-serif mt-4">{message}</p>
+        <p className="text-red-700 text-xl font-serif mt-6">{message}</p>
       )}
     </div>
     </>
