@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Products from "./Products";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NewProduct = () => {
   const [productId, setProductId] = useState("");
   const [productName, setProductName] = useState("");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState(0);
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -16,7 +18,6 @@ const NewProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate inputs
     if (
       !productId ||
       !productName ||
@@ -67,9 +68,8 @@ const NewProduct = () => {
       setMessage("Product added successfully!");
       setTimeout(() => {
         setMessage("");
-      }, 2000); // 3000ms = 3 seconds}
+      }, 2000);
 
-      // Optionally, reset form
       setProductId("");
       setProductName("");
       setRating("");
@@ -111,15 +111,19 @@ const NewProduct = () => {
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
         />
-        <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
-          type="number"
-          min="1"
-          max="5"
-          placeholder="Rating"
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-        />
+        <div className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-96 bg-white flex items-center">
+          <span className="">Rating :</span>
+          {[1, 2, 3, 4, 5].map((index) => (
+            <FontAwesomeIcon
+              key={index}
+              icon={faStar}
+              className={`text-md cursor-pointer transition ml-2 ${
+                index <= rating ? "text-yellow-300" : "text-gray-400"
+              }`}
+              onClick={() => setRating(index)}
+            />
+          ))}
+        </div>
         <input
           className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
           type="text"

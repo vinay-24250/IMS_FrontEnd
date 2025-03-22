@@ -16,15 +16,15 @@ const Footer = () => {
                 About
               </a>{" "}
               |
-              <a href="/privacy-policy" class="hover:underline">
+              <a href="/PrivacyPolicy" class="hover:underline">
                 Privacy Policy
               </a>{" "}
               |
-              <a href="/terms-of-service" class="hover:underline">
+              <a href="/TermsOfService" class="hover:underline">
                 Terms of Service
               </a>{" "}
               |
-              <a href="/contact" class="hover:underline">
+              <a href="/ContactUs" class="hover:underline">
                 Contact Us
               </a>
             </p>

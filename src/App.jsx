@@ -10,6 +10,9 @@ import Products from "./components/Products";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
 import About from "./Pages/About";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsOfService from "./Pages/TermsofService";
+import ContactUs from "./Pages/ContactUs";
 const App = () => {
   
   return (
@@ -23,6 +26,9 @@ const App = () => {
         <Route path="/Products" element={<Products />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/About" element={<About />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />}></Route>
+        <Route path="/TermsOfService" element={<TermsOfService />}></Route>
+        <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
     </>
   );
