@@ -38,12 +38,12 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col place-items-center pt-20 h-[580px] w-screen bg-emerald-100">
+    <div className="flex flex-col place-items-center pt-20 h-[580px] w-screen bg-emerald-100 font-serif ">
       <div className="mt-10 text-center">
         <h2 className="text-2xl font-bold mb-4 font-serif">SEARCH PRODUCT</h2>
 
         <input
-          className="h-14 w-[400px] rounded-full placeholder:text-center placeholder:text-black text-xl pl-5 pr-5 border border-gray-300"
+          className="focus:outline-none h-12 w-[400px] rounded-full placeholder:text-center placeholder:text-black text-xl pl-5 pr-5 border shadow-md shadow-pink-600 border-gray-300"
           type="id"
           placeholder="Enter Product ID"
           value={productId}

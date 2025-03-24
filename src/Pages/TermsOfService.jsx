@@ -23,11 +23,13 @@ const TermsOfService = () => {
           <p className="text-gray-600">We reserve the right to modify these Terms of Service at any time. Continued use of the site constitutes agreement to the updated terms.</p>
 
           <h3 className="text-xl font-semibold text-gray-700">6. Governing Law</h3>
-          <p className="text-gray-600">These Terms of Service are governed by the laws of [Your Country/State].</p>
+          <p className="text-gray-600">These Terms of Service are governed by the laws of India.</p>
 
           <h3 className="text-xl font-semibold text-gray-700">7. Contact Us</h3>
           <p className="text-gray-600">If you have any questions about these Terms, contact us at.</p>
-          <a type="email" className="text-gray-600">Email: contact@fakecompany.com</a><br />
+          <a type="email" className="text-gray-600">Email: contact@minorproject.com
+
+</a><br />
           <a type="phone" className="text-gray-600">Phone: (123) 456-7890</a>
         </div>
       </div>

@@ -5,7 +5,6 @@ const PrivacyPolicy = () => {
     <section className="bg-gray-100 py-12 px-6 text-center min-h-screen">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Privacy Policy</h2>
-        <p className="text-gray-600 mb-6">Effective Date: [Insert Date]</p>
         
         <div className="text-left space-y-6">
           <h3 className="text-xl font-semibold text-gray-700">1. Information We Do Not Collect</h3>

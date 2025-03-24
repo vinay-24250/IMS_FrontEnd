@@ -98,20 +98,20 @@ const NewProduct = () => {
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-5 mt-14 mb-10"
       >
         <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
+          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base shadow-md shadow-pink-600  focus:outline-none"
           type="text"
           placeholder="Enter Product Id (Numeric)"
           value={productId}
           onChange={(e) => setProductId(e.target.value)}
         />
         <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
+          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base shadow-md shadow-pink-600 focus:outline-none"
           type="text"
           placeholder="Product name"
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
         />
-        <div className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-96 bg-white flex items-center">
+        <div className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-96 bg-white flex items-center shadow-md shadow-pink-600 focus:outline-none">
           <span className="">Rating :</span>
           {[1, 2, 3, 4, 5].map((index) => (
             <FontAwesomeIcon
@@ -125,21 +125,21 @@ const NewProduct = () => {
           ))}
         </div>
         <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
+          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base shadow-md shadow-pink-600 focus:outline-none"
           type="text"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
         <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
+          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base shadow-md shadow-pink-600 focus:outline-none"
           type="text"
           placeholder="Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         />
         <input
-          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base"
+          className="placeholder:text-black rounded-3xl font-thin border-spacing-1 h-10 font-mono px-3 w-48 text-sm md:w-96 md:text-base shadow-md shadow-pink-600 focus:outline-none"
           type="text"
           placeholder="Quantity"
           value={quantity}

@@ -63,7 +63,7 @@ const Products = () => {
   };
 
   return (
-    <div className="flex-col justify-center place-items-center bg-emerald-100 min-h-screen p-6">
+    <div className="flex-col justify-center place-items-center bg-emerald-100 min-h-screen p-6 font-[Roboto]">
       <h2 className="text-2xl font-bold pt-4 font-serif text-center">
         Products
       </h2>
@@ -99,13 +99,13 @@ const Products = () => {
             products.map((product) => (
               <tr key={product.productId} className="text-center">
                 <td className="p-2 border border-gray-800">
-                  {product.productId}
+                 {product.productId}
                 </td>
                 <td className="p-2 border border-gray-800">
                   {product.productName}
                 </td>
                 <td className="p-2 border border-gray-800">
-                  {product.price} Rupees
+                  ₹ {product.price}
                 </td>
                 <td className="p-2 border border-gray-800">{product.rating}</td>
                 <td className="p-2 border border-gray-800">
@@ -115,14 +115,13 @@ const Products = () => {
                   {product.category}
                 </td>
                 <td className="p-2 border border-gray-800">
-                <button
-  onClick={() => navigate(`/update/${product.productId}`)}
-  className="bg-stone-400 font-[Roboto] text-sm h-7 transition delay-150 duration-300 ease-in-out rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
->
-  Update
-</button>
-</td>
-
+                  <button
+                    onClick={() => navigate(`/update/${product.productId}`)}
+                    className="bg-stone-400 font-[Roboto] text-sm h-7 transition delay-150 duration-300 ease-in-out rounded-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 hover:text-white"
+                  >
+                    Update
+                  </button>
+                </td>
               </tr>
             ))
           ) : (
